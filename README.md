@@ -1,3 +1,6 @@
-## DevOps Project for Beginners   
+## DevOps Project for Beginners
 
-[![Image](https://github.com/yankils/Simple-DevOps-Project/blob/master/Devops_course.PNG "DevOps Project - CI/CD with Jenkins Ansible Docker Kubernetes ")](https://www.udemy.com/course/valaxy-devops/?referralCode=8147A5CF4C8C7D9E253F)
+this is a java based web application.
+We can use maven to build this project
+it included with a jenkinsfile which can be used through pipeline or multibranch pipeline
+
