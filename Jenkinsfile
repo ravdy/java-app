@@ -1,15 +1,18 @@
 pipeline {
-  agent any
-  tools {
-  maven 'maven'
-  }
-    stages {
-
-	stage ('Build')  {
-	    steps {
-            sh "mvn package"
-        }    
-   }
-
-  }
-  }
+    agent{
+     node{
+        label "java_slave"
+     }
+    }
+    environment {
+        PATH = "/opt/maven/bin:$PATH"
+    }
+    stages{
+        stage("build code"){
+            steps{
+                sh 'mvn clean install'
+            }
+            
+        }
+    }
+}
