@@ -1,18 +1,5 @@
-pipeline {
-    agent{
-     node{
-        label "java_slave"
-     }
-    }
-    environment {
-        PATH = "/opt/maven/bin:$PATH"
-    }
-    stages{
-        stage("build code"){
-            steps{
-                sh 'mvn clean install'
-            }
-            
+node{
+        stage("vinod"){
+            git 'https://github.com/ravdy/java-app.git'
         }
     }
-}
